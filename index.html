@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="contact-form" id="contact-form">
+        <h2 class="contact-form__subtitle subtitle">Contact us</h2>
+        <form class="contact-form__inputs" action="#" method="get" novalidate>
+            <div>
+                <input class="contact-input" type="text" id="username" placeholder="Name" required/>
+            </div>
+            <div>
+                <input class="contact-input" type="tel" id="userphone" placeholder="Phone number" required/>
+            </div>
+            <div>
+                <input class="contact-input" type="email" id="usermail" placeholder="E-mail" required/>
+            </div>
+            <div>
+                <input class="contact-input" type="number" id="servicetype" placeholder="Number"  min = 5 max = 10 required/>
+            </div>
+            <div>
+                <textarea class="contact-input_big" id="comment" cols="30" rows="8" placeholder="Message" required> </textarea>
+            </div>
+
+            <button class="contact-form__button button_black" type="submit" tabindex="7" onclick="checkAll()">Send
+            </button>
+            <div id="errorMessage"></div>
+        </form>
+
+        <div class="contact-form__image">
+            <img src="contact-form.png" alt="photo" />
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

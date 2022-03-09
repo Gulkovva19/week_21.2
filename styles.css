@@ -1,0 +1,156 @@
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* - Типографика ------------------------------------------- */
+.subtitle {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 85%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BDBDBD;
+    margin: 0px;
+    padding-bottom: 60px;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-align: left;
+    color: #333333;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+}
+
+
+/* - Оформление: ссылки, кнопки ---------------------------- */
+
+.button_black {
+    width: 391px;
+    background-color: #333333;
+    border: none;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fffdfd;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 85%;
+    padding: 30px 47px;
+}
+
+.button_black a {
+    text-decoration: none;
+    color: #fffdfd;
+}
+
+.button_black:hover {
+    background: #525252;
+    box-shadow: inset 0 0 4px rgba(51, 51, 51, 0.35);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+.contact-form {
+    grid-area: contact-form;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 391px) minmax(auto, 30px) minmax(auto, 749px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". contact-form__subtitle contact-form__subtitle contact-form__subtitle ."
+        ". contact-form__inputs . contact-form__image ."
+        ". contact-form__inputs . . .";
+}
+
+.contact-form__subtitle {
+    grid-area: contact-form__subtitle;
+}
+
+.contact-form__inputs {
+    grid-area: contact-form__inputs;
+}
+
+.contact-form__image {
+    grid-area: contact-form__image;
+    overflow: hidden;
+}
+
+.contact-form__image img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-form__button {
+    grid-area: contact-form__button;
+    justify-self: start;
+}
+
+.contact-input {
+    background-color: #F3F3F3;
+    border: none;
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 21px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.contact-input_big {
+    background-color: #F3F3F3;
+    border: none;
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 21px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.contact-form__privacy {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #333333;
+    margin-top: 21px;
+    margin-bottom: 21px;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-form__image {
+        display: none;
+    }
+
+    .contact-form {
+        grid-area: contact-form;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". contact-form__subtitle ."
+            ". contact-form__inputs .";
+    }
+}
+
+#errorMessage{
+    color: red;
+}
